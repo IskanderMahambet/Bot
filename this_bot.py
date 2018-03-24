@@ -1,3 +1,5 @@
+# Это бот студентов
+
 import telebot
 import function_students
 
