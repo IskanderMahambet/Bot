@@ -1,20 +1,13 @@
-#music_tools=['Скрипка','Барабан','Гитара','Пианино','Орган']
-#music_tools.append('Домбыра')
-#music_tools.remove('Орган')
-#print(music_tools[:10])
+file = open('shop.txt','r',encoding='utf-8')
+num=0
+for line in file:
+    list_values = line.split(',')
+    num=num+1
+    print('Номер: ',num)
+    print('Штрих код: ',list_values[0])
+    print('Название: ',list_values[1])
+    print('Цена: ',list_values[2])
+    print('Срок годности: ',list_values[3])
+    print('Кол-во товара: ',list_values[4])
 
 
-
-
-#s = input()
-#print(s[: :-1])
-
-
-
-numbers= input('Введите числа через пробел:')
-list_of_num = numbers.split(' ')
-sum_num = 0
-for num in list_of_num :
-    sum_num+=int(num)
-
-print(sum_num)
