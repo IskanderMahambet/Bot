@@ -1,5 +1,3 @@
-# Это бот студентов
-
 import telebot
 import function_students
 
@@ -11,8 +9,7 @@ bot = telebot.TeleBot(token)
 def check_message(message):
     if message.text == 'Список студентов':
         for student in function_students.get_list_students():            
-            bot.send_message(message.chat.id,student[0])
-            bot.send_message(message.chat.id,student[1])
+            bot.send_message(message.chat.id,student)
     elif message.text == 'Сред. оценка':
         bot.send_message(message.chat.id,function_students.get_aver_students_mark())
     elif message.text.isdigit():
